@@ -2,6 +2,10 @@ function dom(selector) {
     return document.querySelector(selector);
 }
 
+function domID(selector) {
+    return document.getElementById(selector).value;
+}
+
 function resetInput() {
     dom("#number").value = "";
 }
@@ -64,7 +68,6 @@ function soDuongNhoNhat() {
 
 function soChanCuoi() {
     let evenNum = 0;
-    // arr.reverse();
     console.log(arr);
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
@@ -75,3 +78,13 @@ function soChanCuoi() {
     dom("#soChanCuoi").innerHTML = evenNum;
 }
 
+function doiCho() {
+    let num1 = domID("num1")*1,
+    num2 = domID("num2")*1;
+    for (let i = 0; i < arr.length; i++) {
+        const tmp = arr[num1]
+        arr[num1] = arr[num2]
+        arr[num2] = tmp
+    }
+    dom("#doiCho").innerHTML = arr;
+}
