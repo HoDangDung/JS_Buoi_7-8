@@ -79,8 +79,8 @@ function soChanCuoi() {
 }
 
 function doiCho() {
-    let num1 = domID("num1")*1,
-    num2 = domID("num2")*1;
+    let num1 = domID("num1") * 1,
+        num2 = domID("num2") * 1;
     for (let i = 0; i < arr.length; i++) {
         const tmp = arr[num1]
         arr[num1] = arr[num2]
@@ -90,6 +90,19 @@ function doiCho() {
 }
 
 function sort() {
-    arr.sort((a,b)=>a-b);
+    arr.sort((a, b) => a - b);
     dom("#sort").innerHTML = arr;
+}
+
+function timSNT() {
+    let soNguyenTo = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % i !== 0 && arr[i] !== 4) {
+            soNguyenTo = arr[i];
+            console.log(arr[i]);
+        }else{
+            soNguyenTo = -1;
+        }
+    }
+    dom("#soNguyenTo").innerHTML = soNguyenTo;
 }
