@@ -88,3 +88,8 @@ function doiCho() {
     }
     dom("#doiCho").innerHTML = arr;
 }
+
+function sort() {
+    arr.sort((a,b)=>a-b);
+    dom("#sort").innerHTML = arr;
+}
